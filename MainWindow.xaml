@@ -1,0 +1,25 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Meeting_Reminder_Toture"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.FontWeight="Medium"
+        TextElement.FontSize="14"
+        FontFamily="{materialDesign:MaterialDesignFont}"
+        x:Class="Meeting_Reminder_Toture.MainWindow"
+        mc:Ignorable="d"
+        Title="Meeting Reminder Torture" Height="450" Width="800" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" Topmost="True" SizeToContent="WidthAndHeight" Icon="/ScheduleTime_80.png">
+    <Grid>
+        <StackPanel Margin="10,10,543,10">
+            <Label x:Name="settingsLable" Content="Settings" FontSize="20"/>
+            <GroupBox Header="Set Reminder Time" Height="72" BorderThickness="1,1,1,1">
+                
+            </GroupBox>
+            <Button x:Name="armAlarmButton" Content="Set Reminder" Click="armAlarmButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
