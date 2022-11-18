@@ -12,14 +12,25 @@
         FontFamily="{materialDesign:MaterialDesignFont}"
         x:Class="Meeting_Reminder_Toture.MainWindow"
         mc:Ignorable="d"
-        Title="Meeting Reminder Torture" Height="450" Width="800" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" Topmost="True" SizeToContent="WidthAndHeight" Icon="/ScheduleTime_80.png">
-    <Grid>
+        Title="Meeting Reminder Torture" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen" Topmost="True" SizeToContent="WidthAndHeight" Icon="/ScheduleTime_80.png">
+    <Grid Width="800" Height="450" HorizontalAlignment="Left" VerticalAlignment="Top">
         <StackPanel Margin="10,10,543,10">
-            <Label x:Name="settingsLable" Content="Settings" FontSize="20"/>
+            <!--Time Picker Container-->
             <GroupBox Header="Set Reminder Time" Height="72" BorderThickness="1,1,1,1">
-                
+                <materialDesign:TimePicker x:Name="reminderTimeSet" Height="25" SelectedTimeFormat="Short" Is24Hours="True"/>
             </GroupBox>
-            <Button x:Name="armAlarmButton" Content="Set Reminder" Click="armAlarmButton_Click"/>
+            <!--"Submit" button-->
+            <Button x:Name="armAlarmButton" Content="Set Reminder" Click="armAlarmButton_Click" Margin="10,10,10,10"/>
+        </StackPanel>
+        <StackPanel Margin="262,10,0,10" Orientation="Vertical" HorizontalAlignment="Left" Width="528">
+            <Canvas Height="91">
+                <Label x:Name="equationLabel" Content="Solve the Equation!" Width="316" FontFamily="Cascadia Mono" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Canvas Height="40" Width="362" HorizontalAlignment="Left" Canvas.Left="10" Canvas.Top="51" VerticalAlignment="Center">
+                    <TextBlock x:Name="equationText" TextWrapping="Wrap" Foreground="#FFEBEBEB" FontFamily="Cascadia Mono" FontSize="26" Text="31 + 17 =" Height="30" Canvas.Top="4" Width="150"/>
+                    <TextBox x:Name="equationAnswerEnter" Foreground="White" FontFamily="Cascadia Mono" Background="#FF575757" FontSize="26" TextAlignment="Center" Height="38" Canvas.Left="150" Width="100"/>
+                    <Button x:Name="equationSubmitButton" Content="Submit" Canvas.Left="271" Canvas.Top="3" FontFamily="Cascadia Mono" Click="equationSubmitButton_Click"/>
+                </Canvas>
+            </Canvas>
         </StackPanel>
     </Grid>
 </Window>
