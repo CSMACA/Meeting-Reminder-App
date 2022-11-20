@@ -21,6 +21,7 @@
             </GroupBox>
             <!--"Submit" button-->
             <Button x:Name="armAlarmButton" Content="Set Reminder" Click="armAlarmButton_Click" Margin="10,10,10,10"/>
+            <Button Name="btnOpenFile" Click="btnOpenFile_Click" Margin="10,10,10,10">Click to Change Alarm Sound</Button>
         </StackPanel>
         <StackPanel Margin="262,10,0,10" Orientation="Vertical" HorizontalAlignment="Left" Width="528">
             <Canvas Height="91">
